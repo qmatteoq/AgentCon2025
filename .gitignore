@@ -15,7 +15,7 @@ dist/
 
 # Env & Secrets
 .env
-!.env.user
+!**/.env.user
 .env.local
 
 # Logs
