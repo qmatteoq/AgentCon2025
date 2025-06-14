@@ -34,6 +34,7 @@ __azurite_db_table__.json
 *.rsuser
 *.suo
 *.user
+!**/.env.user
 *.userosscache
 *.sln.docstates
 
