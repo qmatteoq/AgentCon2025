@@ -1,6 +1,6 @@
-# AgentCon2025
+# AgentCon 2025 - Milan
 
-AgentCon2025 is a sample project demonstrating advanced orchestration and agent-based scenarios using both C# and Python. The project showcases various agent orchestration patterns, plugins, and scenarios, and is designed for educational and demonstration purposes at the AgentCon 2025 event.
+AgentCon2025 is a sample project demonstrating advanced orchestration and agent-based scenarios using both C# and Python. The project showcases various agent orchestration patterns, plugins, and scenarios, and is designed for educational and demonstration purposes at the AgentCon 2025 event in Milan.
 
 ## Project Structure
 
@@ -39,25 +39,13 @@ AgentCon2025/
    cd AgentCon2025
    ```
 2. **C# (dotnet) setup:**
-   - Open `src/csharp/AgentCon2025.slnx` or `AgentCon2025.sln` in Visual Studio or VS Code.
+   - Open `src/csharp/AgentCon2025.slnx`s in Visual Studio or VS Code.
    - Restore NuGet packages and build the solution.
-   - Run the desired scenario from the `OrchestrationSamples` or `Sequential` projects.
+   - Run the desired scenario from the `OrchestrationSamples` project.s
 3. **Python setup:**
    - Navigate to `src/python/`.
    - Install dependencies (if any) and run the scenario scripts, e.g.:
      ```bash
      python concurrent_agents.py
      ```
-
-## Documentation
-
-- See the `docs/` folder for additional documentation and resources.
-- Review scenario and plugin source files for implementation details.
-
-## Contributing
-
-Contributions are welcome! Please read the `CODE_OF_CONDUCT.md` and `CONTRIBUTING.md` (if available) before submitting issues or pull requests.
-
-## License
-
-This project is licensed under the terms of the LICENSE file provided in the root directory.
+s

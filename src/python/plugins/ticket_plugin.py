@@ -35,6 +35,7 @@ class Ticket:
             "createdAt": self.createdAt
         }
 
+
 class TicketPlugin:
     BASE_URL = "https://ticket-copilot.azurewebsites.net/api"
 
@@ -44,7 +45,7 @@ class TicketPlugin:
    
     def name(self) -> str:z
     
-    @kernel_function
+    @kernel_function(name="create_ticket", description="Create a new ticket with the given details.")
     def create_ticket(self, title: str, description: str, assigned_to: Optional[str] = "Matteo Pagani", severity: Optional[str] = "Normal", status: Optional[str] = "Open") -> Optional[Ticket]:
         """Create a new ticket with the given details."""
         ticket = Ticket(title, description, assigned_to, severity, status)
@@ -54,7 +55,7 @@ class TicketPlugin:
             raise Exception(f"Failed to create ticket: {response.status_code} - {response.text}")
         return Ticket.from_dict(response.json())
     
-    @kernel_function
+    @kernel_function(name="get_tickets", description="Retrieve tickets based on optional search criteria.")
     def get_tickets(self, search: Optional[str] = None, assigned_to: Optional[str] = None, status: Optional[str] = None) -> Optional[List[Ticket]]:
         """Retrieve tickets based on optional search criteria."""
         url = f"{self.BASE_URL}/tickets"
@@ -70,7 +71,7 @@ class TicketPlugin:
             raise Exception(f"Failed to get tickets: {response.status_code} - {response.text}")
         return [Ticket.from_dict(item) for item in response.json()]
 
-    @kernel_function
+    @kernel_function(name="delete_ticket", description="Delete a ticket by its ID.")
     def delete_ticket(self, id: str) -> None:
         """Delete a ticket by its ID."""
         response = self.session.delete(f"{self.BASE_URL}/tickets/{id}")

@@ -18,7 +18,7 @@ public class HandoffScenario: BaseAgent
         {
             Name = "TriageAgent",
             Description = "This agent is responsible for triaging support requests from employees and directing them to the appropriate agent based on the request type.",
-            Instructions = "You are an agent specialized in doing the triage of support requests from employees. Depending on the request, you will hand it off to the most appropriate agent. '",
+            Instructions = "You are an agent specialized in doing the triage of support requests from employees. Depending on the request, you will hand it off to the most appropriate agent.",
             Kernel = KernelCreator.CreateKernel(true)
         };
 
