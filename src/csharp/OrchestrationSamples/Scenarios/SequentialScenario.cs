@@ -39,14 +39,6 @@ public class SequentialScenario : BaseAgent
             Description ="Conducts research on a given topic and provides a summary."
         };
 
-        // ChatCompletionAgent researcherAgent = new ChatCompletionAgent
-        // {
-        //     Name = "ResearcherAgent",
-        //     Description = "Conducts research on a given topic and provides a summary.",
-        //     Instructions = "Gather information on the topic, analyze it, and provide a concise summary highlighting key points.",
-        //     Kernel = KernelCreator.CreateKernel(useAzureOpenAI: true)
-        // };
-
         ChatCompletionAgent summarizerAgent = new ChatCompletionAgent
         {
             Name = "SummarizerAgent",
@@ -85,10 +77,10 @@ public class SequentialScenario : BaseAgent
 
         string output = await result.GetValueAsync();
         Console.WriteLine($"\n# RESULT: {output}");
-        Console.WriteLine("\n\nORCHESTRATION HISTORY");
-        foreach (ChatMessageContent message in history)
-        {
-            WriteAgentChatMessage(message);
-        }
+        // Console.WriteLine("\n\nORCHESTRATION HISTORY");
+        // foreach (ChatMessageContent message in history)
+        // {
+        //     WriteAgentChatMessage(message);
+        // }
     }
 }

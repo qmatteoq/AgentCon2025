@@ -16,7 +16,9 @@ public partial class TicketPlugin
 
     [KernelFunction, Description("Create a new ticket with the provided details.")]
     // Create a new ticket
-    public async Task<Ticket?> CreateTicketAsync([Description("The title of the ticket")]string title, [Description("The description of the ticket")]string description, [Description("The person assigned to the ticket")]string? assignedTo = "Matteo Pagani", [Description("The severity of the ticket")]string? severity = "Normal", [Description("The status of the ticket")] string? status = "Open")
+    public async Task<Ticket?> CreateTicketAsync([Description("The title of the ticket")]string title, [Description("The description of the ticket")]string description,
+    [Description("The person assigned to the ticket")] string? assignedTo = "Matteo Pagani", [Description("The severity of the ticket")]string? severity = "Normal",
+    [Description("The status of the ticket")] string? status = "Open")
     {
         var ticket = new Ticket
         {

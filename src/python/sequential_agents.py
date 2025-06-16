@@ -58,7 +58,7 @@ async def main():
         prompt = input("Describe the topic you want to research: ")
         orchestration_result = await orchestrator.invoke(task=prompt, runtime=runtime)
         
-        value = await orchestration_result.get(timeout=20)
+        value = await orchestration_result.get()
 
             
         await runtime.stop_when_idle()

@@ -47,7 +47,7 @@ public class ConcurrentScenario : BaseAgent
             prompt,
             runtime);
 
-        string[] output = await result.GetValueAsync(TimeSpan.FromSeconds(20));
+        string[] output = await result.GetValueAsync();
         Console.WriteLine($"# RESULT:\n{string.Join("\n\n", output.Select(text => $"{text}"))}");
     }
 }
